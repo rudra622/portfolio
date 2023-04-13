@@ -12,20 +12,29 @@ import Protfolio from './component/Protfolio/Protfolio';
 import Services from './component/Services/Services';
 import Contact from './component/Contact/Contact';
 // import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Home from './component/main-index/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-  {/* <App/> */}
-  <Header/>
-  <Banner/>
-  <About/>
-  <Facts/>
-  <Skills/>
-  <Resume/>
-  <Protfolio/>
-  <Services/>
-  <Contact/>
+    {/* <App/> */}
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/Banner' element={<Banner/> } />
+        <Route path='/About' element={<About/> } />
+        <Route path='/Facts' element={<Facts/> } />
+        <Route path='/Skills' element={<Skills/> } />
+        <Route path='/Resume' element={<Resume/> } />
+        <Route path='/Protfolio' element={<Protfolio/> } />
+        <Route path='/Services' element={<Services/> } />
+        <Route path='/Contact' element={<Contact/> } />
+      </Routes>
+    </BrowserRouter>
+    
   </>
 );
 

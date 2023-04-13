@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function Header() {
     return (
@@ -19,12 +20,12 @@ function Header() {
                 </div>
                 <nav id="navbar" className="nav-menu navbar">
                     <ul>
-                        <li><a href="#hero" className="nav-link scrollto active"><i className="bx bx-home" /> <span>Home</span></a></li>
-                        <li><a href="#about" className="nav-link scrollto"><i className="bx bx-user" /> <span>About</span></a></li>
-                        <li><a href="#resume" className="nav-link scrollto"><i className="bx bx-file-blank" /> <span>Resume</span></a></li>
-                        <li><a href="#portfolio" className="nav-link scrollto"><i className="bx bx-book-content" /> <span>Portfolio</span></a></li>
-                        <li><a href="#services" className="nav-link scrollto"><i className="bx bx-server" /> <span>Services</span></a></li>
-                        <li><a href="#contact" className="nav-link scrollto"><i className="bx bx-envelope" /> <span>Contact</span></a></li>
+                        <li><NavLink to="/" className="nav-link scrollto active"><i className="bx bx-home" /> <span>Home</span></NavLink></li>
+                        <li><NavLink to="/About" className="nav-link scrollto"><i className="bx bx-user" /> <span>About</span></NavLink></li>
+                        <li><NavLink to="/Resume" className="nav-link scrollto"><i className="bx bx-file-blank" /> <span>Resume</span></NavLink></li>
+                        <li><NavLink to="/Protfolio" className="nav-link scrollto"><i className="bx bx-book-content" /> <span>Portfolio</span></NavLink></li>
+                        <li><NavLink to="/Services" className="nav-link scrollto"><i className="bx bx-server" /> <span>Services</span></NavLink></li>
+                        <li><NavLink to="/Contact" className="nav-link scrollto"><i className="bx bx-envelope" /> <span>Contact</span></NavLink></li>
                     </ul>
                 </nav>{/* .nav-menu */}
             </div>
